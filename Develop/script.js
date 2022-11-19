@@ -9,6 +9,16 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
+  console.log("hi");
+$(".btn").click(function() {
+  // This will change the background color of what you click on to red.
+  // $(this).css('background-color', "red");
+  console.log()
+  localStorage.setItem($(this).parent().val(), "you saved this");
+  var textexample = $(this).siblings('.description').val();
+  console.log(textexample);
+});
+
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
@@ -28,50 +38,7 @@ $(function () {
     else if (currentHour < i) {
       $("."+i).addClass("future").removeClass("past present");
     }  
-  }
-
-
-  // if (currentHour > 9) {
-  //   $(".9").addClass("past").removeClass("future present");
-  // }
-  // else if (currentHour === 9) {
-  //   $(".9").addClass("present").removeClass("past future");
-  // }
-  // else if (currentHour < 9) {
-  //   $(".9").addClass("future").removeClass("past present");
-  // }
-  
-  // if (currentHour > 10) {
-  //   $(".10").addClass("past").removeClass("future present");
-  // }
-  // else if (currentHour === 10) {
-  //   $(".10").addClass("present").removeClass("past future");
-  // }
-  // else if (currentHour < 10) {
-  //   $(".10").addClass("future").removeClass("past present");
-  // }
-  
-  // if (currentHour > 11) {
-  //   $(".11").addClass("past").removeClass("future present");
-  // }
-  // else if (currentHour === 11) {
-  //   $(".11").addClass("present").removeClass("past future");
-  // }
-  // else if (currentHour < 11) {
-  //   $(".11").addClass("future").removeClass("past present");
-  // }
-
-  // if (currentHour > 16) {
-  //   $(".16").addClass("past").removeClass("future present");
-  // }
-  // else if (currentHour === 16) {
-  //   $(".16").addClass("present").removeClass("past future");
-  // }
-  // else if (currentHour < 16) {
-  //   $(".16").addClass("future").removeClass("past present");
-  // }
-  
-  
+  }  
 
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
