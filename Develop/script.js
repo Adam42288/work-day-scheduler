@@ -35,12 +35,16 @@ $(".btn").click(function() {
     else if (currentHour < i) {
       $("."+i).addClass("future").removeClass("past present");
     }  
-  }  
+  }
 
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
+for (var i = 9; i < 18; i++) {
+var oldtext = localStorage.getItem('hour-'+i+' '+i);
+$('.'+i).children('textarea').val(oldtext);
+}
 
   // DONE: Add code to display the current date in the header of the page.
   // Desired format: Monday, December 13th
