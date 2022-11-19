@@ -17,6 +17,61 @@ $(function () {
   //
   currentHour = dayjs().hour();
   console.log(currentHour);
+  
+  for (var i = 9; i < 18; i++) {
+    if (currentHour > i) {
+      $(i).addClass("past").removeClass("future present");
+    }
+    else if (currentHour === i) {
+      $(i).addClass("present").removeClass("past future");
+    }
+    else if (currentHour < i) {
+      $(i).addClass("future").removeClass("past present");
+    }  
+  }
+
+
+  // if (currentHour > 9) {
+  //   $(".9").addClass("past").removeClass("future present");
+  // }
+  // else if (currentHour === 9) {
+  //   $(".9").addClass("present").removeClass("past future");
+  // }
+  // else if (currentHour < 9) {
+  //   $(".9").addClass("future").removeClass("past present");
+  // }
+  
+  // if (currentHour > 10) {
+  //   $(".10").addClass("past").removeClass("future present");
+  // }
+  // else if (currentHour === 10) {
+  //   $(".10").addClass("present").removeClass("past future");
+  // }
+  // else if (currentHour < 10) {
+  //   $(".10").addClass("future").removeClass("past present");
+  // }
+  
+  // if (currentHour > 11) {
+  //   $(".11").addClass("past").removeClass("future present");
+  // }
+  // else if (currentHour === 11) {
+  //   $(".11").addClass("present").removeClass("past future");
+  // }
+  // else if (currentHour < 11) {
+  //   $(".11").addClass("future").removeClass("past present");
+  // }
+
+  // if (currentHour > 16) {
+  //   $(".16").addClass("past").removeClass("future present");
+  // }
+  // else if (currentHour === 16) {
+  //   $(".16").addClass("present").removeClass("past future");
+  // }
+  // else if (currentHour < 16) {
+  //   $(".16").addClass("future").removeClass("past present");
+  // }
+  
+  
 
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
