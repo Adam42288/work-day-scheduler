@@ -9,13 +9,10 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
-  console.log("hi");
 $(".btn").click(function() {
-  // This will change the background color of what you click on to red.
-  // $(this).css('background-color', "red");
   console.log()
-  localStorage.setItem($(this).parent().val(), "you saved this");
   var textexample = $(this).siblings('.description').val();
+  localStorage.setItem($(this).closest('div').attr('id'), textexample);
   console.log(textexample);
 });
 
