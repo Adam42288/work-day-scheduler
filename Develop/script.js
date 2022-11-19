@@ -20,13 +20,13 @@ $(function () {
   
   for (var i = 9; i < 18; i++) {
     if (currentHour > i) {
-      $(i).addClass("past").removeClass("future present");
+      $("."+i).addClass("past").removeClass("future present");
     }
     else if (currentHour === i) {
-      $(i).addClass("present").removeClass("past future");
+      $("."+i).addClass("present").removeClass("past future");
     }
     else if (currentHour < i) {
-      $(i).addClass("future").removeClass("past present");
+      $("."+i).addClass("future").removeClass("past present");
     }  
   }
 
